@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link href="https://cdn.muicss.com/mui-0.9.16/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.muicss.com/mui-0.9.16/js/mui.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="mui-container">
+      <div class="mui-appbar">
+        <h2 class="mui--text-center">
+          <strong>Welcome to the Date Countdown Timer!</strong>
+        </h2>
+      </div>
+      <div class="mui-textfield" style="width: 450px">
+        <input type="date" id='countdown-date' required>
+        <label><strong>Please select a date to initiate a countdown to! Dates are selected in UTC.</strong></label>
+      </div>
+      <br>
+      <button class="mui-btn mui-btn--primary" onclick={dateCountDown()}>
+        INITIATE COUNTDOWN!
+      </button>
+      <button class="mui-btn mui-btn--danger" onclick={stopCountDown()}>
+        STOP COUNTDOWN
+      </button>
+      <div class="mui-panel">
+        <div class="mui--text-dark mui--text-headline" id='countdown-timer'></div>
+      </div>
+    </div>
+  </body>
+</html>
