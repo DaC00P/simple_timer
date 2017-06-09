@@ -14,7 +14,7 @@ function dateCountDown() {
   else{
     timer.setAttribute("style", "color:black");
     intervalInSeconds = setInterval(function(){
-      changeHtmlToReflectTimeTillEnd(endDate)
+      changeTimeHtml(endDate)
     }, 1000);
   }
 
@@ -31,7 +31,7 @@ function validateDate(endDate){
   return true;
 }
 
-function changeHtmlToReflectTimeTillEnd(endDate) {
+function changeTimeHtml(endDate) {
   var currentDate = new Date();
   var timeToPass = endDate - currentDate;
   //clear the interval that has been set if the timer is finished.
@@ -70,7 +70,5 @@ function dateStringBuilder(hours, minutes, seconds) {
  		}
   }
 
-  return hours + ' hours ' +
-    		 minutes + ' minutes ' +
-   			 seconds + ' seconds remaining';
+  return hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds remaining';
 }
