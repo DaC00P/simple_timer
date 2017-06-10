@@ -17,7 +17,6 @@ function dateCountDown() {
       changeTimeHtml(endDate)
     }, 1000);
   }
-
 }
 
 function stopCountDown(){
@@ -38,8 +37,6 @@ function changeTimeHtml(endDate) {
   if (timeToPass <= 0) {
     clearInterval(intervalInSeconds);
   }
-
-
   //set up our times in milliseconds
   var second = 1000;
   var minute = 60000;
@@ -50,7 +47,6 @@ function changeTimeHtml(endDate) {
   var seconds = Math.floor((timeToPass % minute) / second);
 
   var dateToSet = dateStringBuilder(hours, minutes, seconds)
-
   document.getElementById('countdown-timer').innerHTML = dateToSet;
 }
 
@@ -69,6 +65,5 @@ function dateStringBuilder(hours, minutes, seconds) {
       seconds = '0' + seconds.toString();
     }
   }
-
   return hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds remaining';
 }
