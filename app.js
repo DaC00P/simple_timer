@@ -65,9 +65,9 @@ function dateStringBuilder(hours, minutes, seconds) {
   	seconds = '00'
   }
   else {
-    if (seconds.toString.length.length < 2) {
-              seconds = '0' + seconds.toString();
- 		}
+    if (seconds.toString.length.length < 2){
+      seconds = '0' + seconds.toString();
+    }
   }
 
   return hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds remaining';
